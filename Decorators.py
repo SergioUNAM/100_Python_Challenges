@@ -14,7 +14,7 @@ Una función para comprobar los enteros positivos puede implementarse de la sigu
 def check_argument_is_positive_integer(unary_func):
     def helper(n):
         if type(n) == int and n > 0:
-            return unary_func
+            return unary_func(n)
         else:
             raise ValueError("n must be positive and of type int")
 
@@ -48,6 +48,10 @@ def run():
     # wraping results in new function
     checked_factorial = check_argument_is_positive_integer(factorial)
     print(checked_factorial(5))
+
+    # Factorial of the first 5 numbers
+    for n in range(1,6):
+        print(checked_factorial(n))
 
 
 if __name__ == "__main__":
