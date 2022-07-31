@@ -50,9 +50,12 @@ def run():
     print(checked_factorial(5))
 
     # Factorial of the first 5 numbers
-    for n in range(1,6):
+    for n in range(1, 6):
         print(checked_factorial(n))
 
+
+"""In this example, the decorator is created using functions or nested functions. There are also higher order functions, wich are when a function receives another function as a parameter and returns a functiosn as result"""
+"""En este ejemplo, el decorador se crea utilizando funciones o funciones anidadas. También hay funciones de orden superior, que son cuando una función recibe otra función como parámetro y, como resultado, devuelve una función."""
 
 if __name__ == "__main__":
     run()
