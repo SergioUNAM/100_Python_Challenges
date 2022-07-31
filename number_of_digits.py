@@ -13,7 +13,8 @@ def count_digits(number):
 
 
 def run():
-    print(count_digits(12345))
+    number = int(input("Type a number: "))
+    print(f"{number} is composed by {count_digits(number)} digits")
 
 
 if __name__ == "__main__":
