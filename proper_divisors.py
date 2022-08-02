@@ -24,9 +24,15 @@ def find_proper_divisors(value):
     return divisors
 
 
+def find_proper_divisors2(value):
+    """Returns the proper divisors of a number, same function as the previous one but with List comprehensions."""
+    return [i for i in range(1, value // 2 + 1) if value % i == 0]
+
+
 def run():
     value = int(input("Type an integer number: "))
-    print(f"The proper divisor of {value} are {find_proper_divisors(value)}")
+    print(f"\nThe proper divisor of {value} are {find_proper_divisors(value)}")
+    print(f"\nWith list comprehensions:\nThe proper divisors of {value} are {find_proper_divisors2(value)}")
 
 
 if __name__ == "__main__":
