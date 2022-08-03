@@ -6,7 +6,12 @@ def is_prime(potentially_prime):
 
 
 def run():
-    print(is_prime(38421))
+    primes = []
+    for number in range(2, 10000):
+        if is_prime(number):
+            primes.append(number)
+    print(primes)
+    print(f"There are {len(primes)} primes")
 
 
 if __name__ == "__main__":
