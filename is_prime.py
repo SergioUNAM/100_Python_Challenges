@@ -7,11 +7,13 @@ def is_prime(potentially_prime):
 
 def run():
     primes = []
-    for number in range(2, 10000):
+    for number in range(2, 100):
         if is_prime(number):
             primes.append(number)
     print(primes)
-    print(f"There are {len(primes)} primes")
+    print("\nUsing list comprehensions:")
+    primes2 = [number for number in range(2, 100) if is_prime(number)]
+    print(primes2)
 
 
 if __name__ == "__main__":
