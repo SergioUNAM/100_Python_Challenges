@@ -73,3 +73,19 @@ def run():
 
 if __name__ == "__main__":
     run()
+
+"""
+NOTE: SHADOWING OF BUILT_INS IN SMALL SCOPES
+
+Please note that is a minor inconvenience in the two code samples: the shadowing of the buit-in function sum() by the local variable named sum. Of course, it is easily possible to use sum_as a variable name. But due to the small scope, I prefer to stick to the more readable but shadowing name sum. This should never cause a real problem.
+
+If your functions grow and get more complex, please avoid shadowing to prevent bugs
+
+
+NOTA: PRESENCIA DE FUNCIONES INCORPORADAS EN ÁMBITOS PEQUEÑOS
+
+Tenga en cuenta que hay un pequeño inconveniente en los dos ejemplos de código: la presencia de la función incorporada sum() por la variable local llamada sum. Por supuesto, es fácilmente posible utilizar sum como nombre de variable. Pero debido al pequeño alcance, prefiero quedarme con el nombre más legible Esto nunca debería causar un problema real.
+
+Si sus funciones crecen y se vuelven más complejas, por favor evite usar nombres para las variables de funciones incorporadas para evitar errores
+
+"""
