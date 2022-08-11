@@ -44,6 +44,7 @@ Es aún más claro utilizar un diccionario. Esto hace que el texto de la unidad 
 
 """
 
+
 # With dictionaries / Con diccionarios
 def calc_sum_and_count_all_numbers_div_by_2_or_7_v2(max_exclusive):
     count = 0
