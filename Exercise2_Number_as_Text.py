@@ -1,6 +1,9 @@
 # Excercise 2: Number as Text
 # Write a function number_as_text(n) which, for a given positive number, converts th respective digits into corresponding text
 
+import pytest
+
+
 def number_as_text(n):
     value = ""
     remaining_value = n
@@ -12,11 +15,17 @@ def number_as_text(n):
     return value.strip()
 
 
-value_to_text_mapping = {0: "Zero", 1: "ONE", 2: "TWO", 3: "THREE", 4: "FOUR", 5: "FIVE", 6: "SIX", 7: "SEVEN", 8: "EIGHT", 9: "NINE"}
+value_to_text_mapping = {0: "Zero", 1: "ONE", 2: "TWO", 3: "THREE", 4: "FOUR", 5: "FIVE", 6: "SIX", 7: "SEVEN",
+                         8: "EIGHT", 9: "NINE"}
 
 
 def digit_as_text(n):
     return value_to_text_mapping[n % 10]
+
+
+@pytest.mark.parametrize("n, expected", [(7, "SEVEN"), (42, "FOUR TWO"), (13578, "ONE THREE FIVE SEVEN EIGHT")])
+def test_number_as_test(n, expected):
+    assert number_as_text(n) == expected
 
 
 def run():
